@@ -53,11 +53,13 @@ const ViewResume = () => {
         {/* Left section for skills and education */}
         <div className="col-5 m-0 p-3" style={{ backgroundColor: "#faefef" }}>
           <div>
+            {Skills && Skills ? <h4>SKILLS</h4> : null}
             <ul>
               {Skills && Skills.map((el, i) => <li key={i * 100}>{el}</li>)}
             </ul>
           </div>
           <div>
+            {Education && Education ? <h5>EDUCATIONAL BACKGROUND</h5> : null}
             <h5>
               {Education.school_name} {Education.school_location}
             </h5>
@@ -70,6 +72,7 @@ const ViewResume = () => {
         {/* Right section for experience and project */}
         <div className="col-7 m-0 p-0">
           <div className="p-3">
+            {Experience.company.length > 0 ? <h5>EXPERIENCE</h5> : null}
             <h5>{Experience.company + " " + Experience.location}</h5>
             <h6>{Experience.designation}</h6>
             <p>
@@ -77,7 +80,7 @@ const ViewResume = () => {
                 " " +
                 Experience.start_year +
                 " " +
-                 Experience.end_month +
+                Experience.end_month +
                 " " +
                 Experience.end_year}
             </p>
