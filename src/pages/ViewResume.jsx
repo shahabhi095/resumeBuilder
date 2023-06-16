@@ -73,7 +73,7 @@ const ViewResume = () => {
         <div className="col-7 m-0 p-0">
           <div className="p-3">
             {Experience.company.length > 0 ? <h5>EXPERIENCE</h5> : null}
-            <h5>{Experience.company + " " + Experience.location}</h5>
+            <h5>{Experience.company + ", " + Experience.location}</h5>
             <h6>{Experience.designation}</h6>
             <p>
               {Experience.start_month +
