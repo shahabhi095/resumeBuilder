@@ -38,7 +38,9 @@ const ExperienceForm = () => {
    const HandleSave = (event) => {
      event.preventDefault();
     dispatch(experienceAction(experience));
+
    };
+   console.log(experience)
   return (
     <div className="d-flex flex-sm-row gap-5">
       {" "}

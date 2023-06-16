@@ -8,17 +8,13 @@ const ViewResume = () => {
        const Contact = useSelector((store) => store.Contact);
         const Summary = useSelector((store) => store.Summary);
         const Skills = useSelector((store) => store.Skills);
-       console.log(Education)
-       console.log(Experience)
-       console.log(Summary);
+      
+       console.log(Experience.end_month)
   return (
     <div className="page">
       <div className="row m-0 p-0">
         {/* Heading and Contact */}
-        <div
-          className="col-5 m-0 p-4"
-          style={{ backgroundColor: "#f2d7d6" }}
-        >
+        <div className="col-5 m-0 p-4" style={{ backgroundColor: "#f2d7d6" }}>
           <h2>
             {Contact.first_name && Contact.last_name
               ? `${Contact.first_name} ${Contact.last_name}`
@@ -44,7 +40,7 @@ const ViewResume = () => {
         {/* Professional Summary */}
         <div
           className="col-7 m-0"
-          style={{ backgroundColor: "#faefef", padding:"25px 60px 15px 20px" }}
+          style={{ backgroundColor: "#faefef", padding: "25px 60px 15px 20px" }}
         >
           <h3>PROFESSIONAL SUMMARY</h3>
           <p style={{ overflow: "break-word", textAlign: "justify" }}>
@@ -55,10 +51,7 @@ const ViewResume = () => {
 
       <div className="row m-0 p-0">
         {/* Left section for skills and education */}
-        <div
-          className="col-5 m-0 p-3"
-          style={{ backgroundColor: "#faefef"}}
-        >
+        <div className="col-5 m-0 p-3" style={{ backgroundColor: "#faefef" }}>
           <div>
             <ul>
               {Skills && Skills.map((el, i) => <li key={i * 100}>{el}</li>)}
@@ -84,11 +77,9 @@ const ViewResume = () => {
                 " " +
                 Experience.start_year +
                 " " +
-                +
-                Experience.end_month +
+                 Experience.end_month +
                 " " +
-                Experience.end_year
-              }
+                Experience.end_year}
             </p>
           </div>
         </div>
